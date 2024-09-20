@@ -113,7 +113,7 @@ curl -X POST http://localhost:3000/api/rankings \
 - [X] Google ranking
 - [X] Bing ranking
 - [X] DuckDuckGo ranking
-- [ ] Better output?
+- [X] Better output
 
 ## Later
 - [ ] Using env file instead of manual export

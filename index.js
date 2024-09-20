@@ -34,7 +34,14 @@ app.post('/api/rankings', async(req, res) => {
       return await getRanking(keyword, engine, cleanDomain);
     }));
 
-    return { domain, engine, keywords, rankings };
+    // map keywords - rankings in one array
+    const rankingResults = keywords.map((keyword, index) => {
+      return [keyword, rankings[index]];
+    });
+
+    console.log(rankingResults);
+
+    return { domain, engine, rankingResults };
   }))
 
   console.log(results);
