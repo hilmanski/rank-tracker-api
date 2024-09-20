@@ -32,39 +32,53 @@ export SERPAPI_API_KEY=YOUR_ACTUAL_API_KEY
 
 ## Example usage
 
+Simple sample
 ```  
 {
-  "domain": "sko.dev",
-  "keywords": ["skodev indonesia"],
+  "domain": "archive.org",
+  "keywords": ["internet archive"],
   "engines": [
     {
       "name": "google",
       "params": {
-        "domain": "google.co.id",
-        "gl": "id",
-        "hl": "id"
-      }
-    },
-    {
-      "name": "duckduckgo",
-      "params": {
-        "region": "id-id"
+        "domain": "google.com",
+        "gl": "es"
       }
     }
   ]
 }
 ```
 
-Curl
+Multiple engines
+```  
+{
+  "domain": "archive.org",
+  "keywords": ["internet archive", "archived digital library"],
+  "engines": [
+    {
+      "name": "google",
+      "params": {
+        "domain": "google.com",
+        "gl": "es"
+      }
+    },
+    {
+      "name": "Bing",
+      "params": {
+        "cc": "gb"
+      }
+    }
+  ]
+}
+```
 
-
-No params sample
+cURL: No params sample
 ```
 curl -X POST http://localhost:3000/api/rankings \
   -H 'Content-Type: application/json' \
   -d '{
-    "keywords": ["skodev indonesia"],
-    "domain": "sko.dev",
+    "keywords": ["internet archive"],
+    "domain": "archive.org",
     "engines": [
       {
        "name": "google"
@@ -73,20 +87,19 @@ curl -X POST http://localhost:3000/api/rankings \
   }'
 ```
 
-Sample with params
+cURL: Sample with params
 ```
 curl -X POST http://localhost:3000/api/rankings \
   -H 'Content-Type: application/json' \
 -d '{
-    "keywords": ["skodev indonesia"],
-    "domain": "sko.dev",
+    "keywords": ["internet archive", "digital library archived internet"],
+    "domain": "archive.org",
     "engines": [
       {
         "name": "google",
         "params": {
             "google_domain": "google.co.id",
-            "gl": "id",
-            "hl": "id"
+            "gl": "es"
         }
       }
     ]
