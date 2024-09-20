@@ -6,6 +6,8 @@ if(!SERPAPI_API_KEY) {
   process.exit(1);
 }
 
+const suportEngines = ['google', 'bing'];
+
 function searchGoogle(keyword, params, domain) {
   let endpoint = `https://serpapi.com/search?q=${keyword}&engine=google&num=100&api_key=${SERPAPI_API_KEY}`
   if(params) {
@@ -43,16 +45,16 @@ function searchBing(keyword, params, domain) {
 
 }
 
-const suportEngines = ['google', 'bing'];
-
 async function getRanking(keyword, engine, domain) {
-  if(!suportEngines.includes(engine.name)) {
-      console.error(`Error: Engine ${engine.name} is not supported.`);
+  const engineName = engine.name.toLowerCase();
+
+  if(!suportEngines.includes(engineName)) {
+      console.error(`Error: Engine ${engineName} is not supported.`);
       return;
   }
 
   return new Promise(async (resolve, reject) => {
-      switch(engine.name) {
+      switch(engineName) {
           case 'google':
             resolve(await searchGoogle(keyword, engine.params, domain))
           break;

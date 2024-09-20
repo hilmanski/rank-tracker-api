@@ -6,11 +6,11 @@ Rank tracker API. Track your website ranking accross different search engines.
 - [SerpApi](https://serpapi.com/) - to check the SERP ranking
 
 ## Supported Search engines
-- Google (max check: 100th position)
-- Bing (max check: 50th position)
-- DuckDuckGo
+- Google (max: 100th position)
+- Bing (max: 50th position)
+- DuckDuckGo (max: 30th position)
 
-Ranking 0 means the domain is not found in the SERP.
+Ranking 0 means the domain is not found in the SERP until that max position.
 
 ## Run locally
 - Export your API Key
@@ -109,7 +109,7 @@ curl -X POST http://localhost:3000/api/rankings \
 
 ## Now
 - [X] Google ranking
-- [ ] Bing ranking
+- [X] Bing ranking
 - [ ] DuckDuckGo ranking
 - [ ] Better output?
 
