@@ -6,10 +6,6 @@ const port = 3000
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 app.post('/api/rankings', async(req, res) => {
   const { keywords, engines, domain } = req.body;
 
