@@ -5,6 +5,8 @@ Rank tracker API. Track your website ranking accross different search engines.
 - NodeJS (Express)
 - [SerpApi](https://serpapi.com/) - to check the SERP ranking
 
+Make sure to register at serpapi.com first to get your API Key.
+
 ## Supported Search engines
 - Google (max: 100th position)
 - Bing (max: 50th position)
@@ -114,4 +116,5 @@ curl -X POST http://localhost:3000/api/rankings \
 - [ ] Better output?
 
 ## Later
+- [ ] Using env file instead of manual export
 - [ ] Yahoo ranking (later) - we need to perform a pagination, since organic_results return is too little per page.
