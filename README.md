@@ -110,8 +110,8 @@ curl -X POST http://localhost:3000/api/rankings \
 ## Now
 - [X] Google ranking
 - [X] Bing ranking
-- [ ] DuckDuckGo ranking
+- [X] DuckDuckGo ranking
 - [ ] Better output?
 
 ## Later
-- [ ] Yahoo ranking (later)
+- [ ] Yahoo ranking (later) - we need to perform a pagination, since organic_results return is too little per page.
