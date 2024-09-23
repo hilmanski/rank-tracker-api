@@ -1,7 +1,7 @@
 # About
-Rank tracker API. Track your website ranking accross different search engines. 
+Rank tracker API. Track your website rankings accross different search engines. 
 
-Interested in the step-by-step tutorial? Read this post: [How to build rank tracker API](https://serpapi.com/blog/serp-tracking-api-create-a-whiltelabel-rank-tracker-app/)
+Interested in the step-by-step tutorial? Read this post: [How to build a Rank Tracker API](https://serpapi.com/blog/serp-tracking-api-create-a-whiltelabel-rank-tracker-app/)
 
 ## Tech
 - NodeJS (Express)
