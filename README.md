@@ -1,6 +1,8 @@
 # About
 Rank tracker API. Track your website ranking accross different search engines. 
 
+Interested in the step-by-step tutorial? Read this post: [How to build rank tracker API](https://serpapi.com/blog/serp-tracking-api-create-a-whiltelabel-rank-tracker-app/)
+
 ## Tech
 - NodeJS (Express)
 - [SerpApi](https://serpapi.com/) - to check the SERP ranking
@@ -101,7 +103,7 @@ curl -X POST http://localhost:3000/api/rankings \
         "name": "google",
         "params": {
             "google_domain": "google.co.id",
-            "gl": "es"
+            "gl": "id"
         }
       }
     ]

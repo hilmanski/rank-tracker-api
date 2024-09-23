@@ -41,12 +41,10 @@ app.post('/api/rankings', async(req, res) => {
 
     console.log(rankingResults);
 
-    return { domain, engine, rankingResults };
+    return { domain, engine, rankingResults }
   }))
-
-  console.log(results);
-
-  res.json({ keywords, engines });
+  
+  res.json(results);
 })
 
 app.listen(port, () => {
