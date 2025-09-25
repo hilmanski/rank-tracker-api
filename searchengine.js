@@ -9,7 +9,7 @@ if(!SERPAPI_API_KEY) {
 const suportEngines = ['google', 'bing', 'duckduckgo'];
 
 function searchGoogle(keyword, params, domain) {
-  let endpoint = `https://serpapi.com/search?q=${keyword}&engine=google&num=100&api_key=${SERPAPI_API_KEY}`
+  let endpoint = `https://serpapi.com/search?q=${keyword}&engine=google_light_fast&num=100&api_key=${SERPAPI_API_KEY}`
   if(params) {
       endpoint += `&${new URLSearchParams(params).toString()}`
   }
