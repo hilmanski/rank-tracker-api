@@ -10,11 +10,15 @@ Interested in the step-by-step tutorial? Read this post: [How to build a Rank Tr
 Make sure to register at serpapi.com first to get your API Key.
 
 ## Supported Search engines
-- Google (max: 100th position)
+- Google (max: 100th position)(read issue below)
 - Bing (max: 50th position)
 - DuckDuckGo (max: 30th position)
 
 Ranking 0 means the domain is not found in the SERP until that max position.
+
+Issue:
+Currently Google limited their searches to only 10 results per page.
+
 
 ## Run locally
 - Export your API Key
