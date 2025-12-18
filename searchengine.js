@@ -1,8 +1,9 @@
-// exported in terminal
-const SERPAPI_API_KEY = process.env.SERPAPI_API_KEY;
+import { loadEnv } from './utils.js';
+
+const SERPAPI_API_KEY = loadEnv('SERPAPI_API_KEY');
 
 if(!SERPAPI_API_KEY) {
-  console.error('SERPAPI_API_KEY is required.');
+  console.error('SERPAPI_API_KEY is required. Please add it to your .env file.');
   process.exit(1);
 }
 
